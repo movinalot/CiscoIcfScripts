@@ -97,9 +97,9 @@ if ($IcfCatalogNameOid -eq 0 -and ($IcfImageNameOid.Length -gt 0 -and $IcfUserGr
     $fromJson = $response.Content | ConvertFrom-Json
     $icfSR = $fromJson.success.links.service_request
 
-    # Query the SR checking status. Timeout after 10 mins
+    # Query the SR checking status. Timeout after 60 mins
     $SrStatus = ''
-    $timeout = new-timespan -Minutes 10
+    $timeout = new-timespan -Minutes 60
     $sw = [diagnostics.stopwatch]::StartNew()
     while ($sw.elapsed -lt $timeout){
 
