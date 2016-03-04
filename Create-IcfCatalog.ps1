@@ -63,10 +63,10 @@ $headers=@{
     'x_icfb_token' = $response.BaseResponse.Headers.Get('x_icfb_token')
 }
 
-$IcfCatalogNameOid = $(.\Get-IcfObjectOid.ps1 -IcfHost $IcfHost -IcfAdmin $IcfAdmin -IcfAdminPass $IcfAdminPass -IcfObjectResource catalog-items -IcfObjectName $IcfCatalogName)
-$IcfImageNameOid = $(.\Get-IcfObjectOid.ps1 -IcfHost $IcfHost -IcfAdmin $IcfAdmin -IcfAdminPass $IcfAdminPass -IcfObjectResource images -IcfObjectName $IcfImageName)
-$IcfUserGroupOid = $(.\Get-IcfObjectOid.ps1 -IcfHost $IcfHost -IcfAdmin $IcfAdmin -IcfAdminPass $IcfAdminPass -IcfObjectResource user-groups -IcfObjectName $IcfUserGroup)
-$IcfCloudOid = $(.\Get-IcfObjectOid.ps1 -IcfHost $IcfHost -IcfAdmin $IcfAdmin -IcfAdminPass $IcfAdminPass -IcfObjectResource icf-clouds -IcfObjectName $IcfCloud)
+$IcfCatalogNameOid = $(..\Get-IcfObjectOid.ps1 -IcfHost $IcfHost -IcfAdmin $IcfAdmin -IcfAdminPass $IcfAdminPass -IcfObjectResource catalog-items -IcfObjectName $IcfCatalogName)
+$IcfImageNameOid = $(..\Get-IcfObjectOid.ps1 -IcfHost $IcfHost -IcfAdmin $IcfAdmin -IcfAdminPass $IcfAdminPass -IcfObjectResource images -IcfObjectName $IcfImageName)
+$IcfUserGroupOid = $(..\Get-IcfObjectOid.ps1 -IcfHost $IcfHost -IcfAdmin $IcfAdmin -IcfAdminPass $IcfAdminPass -IcfObjectResource user-groups -IcfObjectName $IcfUserGroup)
+$IcfCloudOid = $(..\Get-IcfObjectOid.ps1 -IcfHost $IcfHost -IcfAdmin $IcfAdmin -IcfAdminPass $IcfAdminPass -IcfObjectResource icf-clouds -IcfObjectName $IcfCloud)
 
 if ($showResponse) {
     Write-Host "Catalog $IcfCatalogName and OID: $IcfCatalogNameOid"
