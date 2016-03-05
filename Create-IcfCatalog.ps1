@@ -126,7 +126,7 @@ if ($IcfCatalogNameOid -eq 0 -and ($IcfImageNameOid.Length -gt 0 -and $IcfUserGr
         exit
     }
 
-    $IcfCatalogNameOid = $(.\Get-IcfObjectOid.ps1 -IcfHost $IcfHost -IcfAdmin $IcfAdmin -IcfAdminPass $IcfAdminPass -IcfObjectResource catalog-items -IcfObjectName $IcfCatalogName)
+    $IcfCatalogNameOid = $(..\Get-IcfObjectOid.ps1 -IcfHost $IcfHost -IcfAdmin $IcfAdmin -IcfAdminPass $IcfAdminPass -IcfObjectResource catalog-items -IcfObjectName $IcfCatalogName)
 
     if ($IcfCatalogNameOid -gt 0) {
         Write-Host "Catalog Item $IcfCatalogName created in ICF"
