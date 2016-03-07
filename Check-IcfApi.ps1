@@ -37,6 +37,7 @@ $json = @"
 }
 "@
 
+Start-Sleep -Seconds 240
 
 While ($true) {
 
@@ -57,7 +58,7 @@ While ($true) {
     }
 
     Write-Host "ICF API not yet availability, check again in 30 seconds"
-    start-sleep -seconds 30
+    start-sleep -seconds 60
 }
 
 # Show the token and the Session Cookie
