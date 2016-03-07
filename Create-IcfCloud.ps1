@@ -352,7 +352,7 @@ if ($icfCloudOid.Length -eq 0) {
             "cloud_security_group_oid":"$CloudSecurityGroupOid"},
         "high_availability":"false",
         "service_configuration":{
-            "enable_integrated_router":"true"},
+            "enable_integrated_router":"false"},
         "icf_cloud_type":"$CloudProviderTyp"
     }
 "@

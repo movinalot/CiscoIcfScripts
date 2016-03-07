@@ -99,7 +99,7 @@ if ($IcfCatalogNameOid -eq 0 -and ($IcfImageNameOid.Length -gt 0 -and $IcfUserGr
 
     # Query the SR checking status. Timeout after 60 mins
     $SrStatus = ''
-    $timeout = new-timespan -Minutes 60
+    $timeout = new-timespan -Minutes 120
     $sw = [diagnostics.stopwatch]::StartNew()
     while ($sw.elapsed -lt $timeout){
 
