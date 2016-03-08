@@ -37,7 +37,7 @@ $json = @"
 }
 "@
 
-Start-Sleep -Seconds 240
+$firstTime = $true
 
 While ($true) {
 
@@ -55,6 +55,11 @@ While ($true) {
     if ($response.Length -gt 0) {
         if ($showResponse) {$response}
         break
+    }
+
+    if ($firstTime) {
+        $firstTime = $false
+        Start-Sleep -Seconds 240
     }
 
     Write-Host "ICF API not yet availability, check again in 30 seconds"
