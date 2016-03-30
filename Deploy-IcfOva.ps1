@@ -63,10 +63,10 @@ param(
       [string] $IcfdDns2 = "8.8.8.4",
 
     [Parameter(Mandatory=$false,HelpMessage="Enter the ICF Director Primary NTP Server")]
-      [string] $IcfdNtp1 = "216.229.0.179",
+      [string] $IcfdNtp1 = "0.north-america.pool.ntp.org",
 
     [Parameter(Mandatory=$false,HelpMessage="Enter the ICF Director Secondary NTP Server - optional")]
-      [string] $IcfdNtp2 = "24.56.178.140",
+      [string] $IcfdNtp2 = "1.north-america.pool.ntp.org",
 
     [Parameter(Mandatory=$false,HelpMessage="Enter the ICF Director Syslog Server - optional")]
       [string] $IcfdSyslog = "0.0.0.0",
